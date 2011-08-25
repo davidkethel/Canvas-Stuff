@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang"en" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>untitled</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	
+	<script tyoe="text/javascript">
+	$(document).ready(function(){
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		
+		context.fillStyle = "orange";
+		context.fillRect(50,50,100,100);
+		
+		context.fillStyle = "green";
+		context.fillRect(75,75, 100,100);
+	});
+</script>
+
+
+</head>
+<body>
+<canvas id="canvas" height="300px" width="300px"></canvas>
+<div>
+<input type="button"   value="Bring Green To Front" />
+<input type="button"   value="Bring Orange To Front" />
+</div>
+</body>
+</html>
