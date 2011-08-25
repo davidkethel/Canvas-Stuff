@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd" >
+<html lang"en" >
+<head>
+<title> canvas Shape</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script type="text/javascript" >
+$(document).ready(function() {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    context.fillRect(50, 50, 100, 100);
+
+	context.moveTo(10,0);
+	context.lineTo(10, 50);
+	context.lineTo(50, 50);
+	context.strokeStyle = "#eee";
+	context.stroke();
+
+	context.beginPath();
+	context.moveTo(190, 0);
+	context.lineTo(190, 50);
+	context.lineTo(100, 50);
+	context.strokeStyle = "#eee";
+	context.stroke();
+
+	context.beginPath();
+	context.moveTo(190, 190);
+	context.lineTo(190, 150);
+	context.lineTo(100, 150);
+	context.strokeStyle = "#eee";
+	context.stroke();
+
+	context.beginPath();
+	context.moveTo(10, 190);
+	context.lineTo(10, 150);
+	context.lineTo(100, 150);
+	context.strokeStyle = "#eee";
+	context.stroke();
+
+});
+ </script>
+</head>
+<body>
+<canvas id="canvas" width="200"  height="200">
+</canvas>
+</body>
+</html>
