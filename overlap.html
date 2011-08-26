@@ -5,41 +5,36 @@
 	<title>untitled</title>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	
-	<script tyoe="text/javascript">
+	<script typre="text/javascript">
 	$(document).ready(function(){
+		
+		function drawOrangeSquare(){
+			context.fillStyle = "orange";
+			context.fillRect(50,50,100,100);			
+		}
+		
+		function drawGreenSquare()	{
+				context.fillStyle = "green";
+				context.fillRect(75,75,100,100);				
+		}
+		
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
-		
-		context.fillStyle = "orange";
-		context.fillRect(50,50,100,100);
-		
-		context.fillStyle = "green";
-		context.fillRect(75,75, 100,100);
+			
+		drawGreenSquare();
+		drawOrangeSquare();
 		
 		$("#greenToFront").click(function() {
 			canvas.width = canvas.width;
-			
-			context.fillStyle = "orange";
-			context.fillRect(50,50,100,100);
-
-			context.fillStyle = "green";
-			context.fillRect(75,75, 100,100);
+			drawOrangeSquare();
+			drawGreenSquare();
 		});
-
 
 		$("#orangeToFront").click(function() {
 			canvas.width = canvas.width;
-
-			context.fillStyle = "green";
-			context.fillRect(75,75, 100,100);
-			
-			context.fillStyle = "orange";
-			context.fillRect(50,50,100,100);
+			drawGreenSquare();	
+			drawOrangeSquare();
 		});
-		
-		
-		
-		
 	});
 </script>
 
