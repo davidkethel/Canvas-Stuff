@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang"en" >
+<htmllang"en" >
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>untitled</title>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	
-	<script typre="text/javascript">
-	$(document).ready(function(){
-		
-		function drawOrangeSquare(){
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>untitled</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script typre="text/javascript">
+	$(document).ready(function() {
+		function drawOrangeSquare() {
 			context.fillStyle = "orange";
-			context.fillRect(50,50,100,100);			
+			context.fillRect(50, 50, 100, 100);
 		}
-		
-		function drawGreenSquare()	{
-				context.fillStyle = "green";
-				context.fillRect(75,75,100,100);				
+
+		function drawGreenSquare() {
+			context.fillStyle = "green";
+			context.fillRect(75, 75, 100, 100);
 		}
-		
+
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
-			
+
 		drawGreenSquare();
 		drawOrangeSquare();
-		
+
 		$("#greenToFront").click(function() {
 			canvas.width = canvas.width;
 			drawOrangeSquare();
@@ -32,19 +32,17 @@
 
 		$("#orangeToFront").click(function() {
 			canvas.width = canvas.width;
-			drawGreenSquare();	
+			drawGreenSquare();
 			drawOrangeSquare();
 		});
 	});
 </script>
-
-
 </head>
 <body>
-<canvas id="canvas" height="300px" width="300px"></canvas>
-<div>
-<input type="button"  id="greenToFront" value="Bring Green To Front" />
-<input type="button" id="orangeToFront"  value="Bring Orange To Front" />
-</div>
+	<canvas id="canvas" height="300px" width="300px"></canvas>
+	<div>
+		<input type="button" id="greenToFront" value="Bring Green To Front" />
+		<input type="button" id="orangeToFront" value="Bring Orange To Front" />
+	</div>
 </body>
 </html>
