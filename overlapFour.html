@@ -8,33 +8,17 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		function drawOrangeSquare() {
-			context.fillStyle = "orange";
-			context.fillRect(50, 50, 100, 100);
-		}
-
-		function drawGreenSquare() {
-			context.fillStyle = "green";
-			context.fillRect(75, 75, 100, 100);
-		}
 
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
+		var colours = [ "green", "blue", "red", "orange" ];
 
-		drawGreenSquare();
-		drawOrangeSquare();
+		for (i = 0; i < 4; i++) {
 
-		$("#greenToFront").click(function() {
-			canvas.width = canvas.width;
-			drawOrangeSquare();
-			drawGreenSquare();
-		});
+			context.fillStyle = colours[i];
+			context.fillRect(i * 25, i * 25, 100, 100);
+		}
 
-		$("#orangeToFront").click(function() {
-			canvas.width = canvas.width;
-			drawGreenSquare();
-			drawOrangeSquare();
-		});
 	});
 </script>
 </head>
@@ -43,6 +27,8 @@
 	<div>
 		<input type="button" id="greenToFront" value="Bring Green To Front" />
 		<input type="button" id="orangeToFront" value="Bring Orange To Front" />
+		<input type="button" id="redToFront" value="Bring Red To Front" /> <input
+			type="button" id="blueToFront" value="Bring Blue To Front" />
 	</div>
 </body>
 </html>
