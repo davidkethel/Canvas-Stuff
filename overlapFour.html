@@ -11,14 +11,44 @@
 
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
+
 		var colours = [ "green", "blue", "red", "orange" ];
 
-		for (i = 0; i < 4; i++) {
+		drawSquares();
 
-			context.fillStyle = colours[i];
-			context.fillRect(i * 25, i * 25, 100, 100);
+		$("#greenToFront").click(function() {
+
+			var indexOfGreen = colours.indexOf("green");
+
+			var newArray = [ "green" ];
+
+			colours = [ "blue", "red", "orange", "green" ];
+
+			drawSquares();
+		});
+
+		$("#orangeToFront").click(function() {
+			colours = [ "green", "blue", "red", "orange" ];
+			drawSquares();
+		});
+
+		$("#redToFront").click(function() {
+			colours = [ "orange", "green", "blue", "red" ];
+			drawSquares();
+		});
+
+		$("#blueToFront").click(function() {
+			colours = [ "green", "red", "orange", "blue" ];
+			drawSquares();
+		});
+
+		function drawSquares() {
+			canvas.width = canvas.width;
+			for (i = 0; i < 4; i++) {
+				context.fillStyle = colours[i];
+				context.fillRect(i * 25, i * 25, 100, 100);
+			}
 		}
-
 	});
 </script>
 </head>
