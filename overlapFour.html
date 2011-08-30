@@ -6,6 +6,8 @@
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
+<script src="overlapFour.js" type="text/javascript"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 
@@ -17,6 +19,8 @@
 		drawSquares();
 
 		$("#greenToFront").click(function() {
+
+			alert(bringToFront(colours,"green"));
 
 			var indexOfGreen = colours.indexOf("green");
 

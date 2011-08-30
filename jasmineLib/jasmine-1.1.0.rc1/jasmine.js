@@ -2473,4 +2473,4 @@ jasmine.version_= {
   "build": 0,
   "revision": 1308187385,
   "rc": 1
-}
+};
