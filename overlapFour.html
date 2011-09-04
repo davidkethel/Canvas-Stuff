@@ -20,29 +20,22 @@
 
 		$("#greenToFront").click(function() {
 
-			alert(bringToFront(colours,"green"));
-
-			var indexOfGreen = colours.indexOf("green");
-
-			var newArray = [ "green" ];
-
-			colours = [ "blue", "red", "orange", "green" ];
-
+			colours = bringToFront(colours, "green");
 			drawSquares();
 		});
 
 		$("#orangeToFront").click(function() {
-			colours = [ "green", "blue", "red", "orange" ];
+			colours = bringToFront(colours, "orange");
 			drawSquares();
 		});
 
 		$("#redToFront").click(function() {
-			colours = [ "orange", "green", "blue", "red" ];
+			colours = bringToFront(colours, "red");
 			drawSquares();
 		});
 
 		$("#blueToFront").click(function() {
-			colours = [ "green", "red", "orange", "blue" ];
+			colours = bringToFront(colours, "blue");
 			drawSquares();
 		});
 

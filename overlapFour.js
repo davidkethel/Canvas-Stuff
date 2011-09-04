@@ -1,37 +1,21 @@
 function bringToFront(colours, colour) {
 
-	if (colours.length == 3) {
-		if (colours[0] == colour) {
+	var colourFound = false;
+	var newArray = [];
 
-			var newArray = [];
+	for ( var i = 0; i < colours.length; i++) {
 
-			newArray[0] = colours[1];
-			newArray[1] = colours[2];
-			newArray[2] = colours[0];
-			return newArray;
+		if (colours[i] == colour) {
+			colourFound = true;
 		}
 
-		if (colours[1] == colour) {
-
-			var newArray = [];
-			newArray[0] = colours[0];
-			newArray[1] = colours[2];
-			newArray[2] = colours[1];
-
-			return newArray;
+		if (colourFound == true) {
+			newArray[i] = colours[i + 1];
+		} else {
+			newArray[i] = colours[i];
 		}
 	}
 
-	if (colours.length == 2) {
-		if (colours[1] != colour) {
-
-			var newArray = [];
-
-			newArray[0] = colours[1];
-			newArray[1] = colours[0];
-			return newArray;
-		}
-	}
-
-	return colours;
+	newArray[colours.length - 1] = colour;
+	return newArray;
 }

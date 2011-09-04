@@ -53,53 +53,91 @@ describe("BringToFront", function() {
 				[ "green", "yellow" ]);
 	});
 
-	
-	
-	
-	
-	
 	it("should be able to do this", function() {
-		expect(bringToFront([  "blue", "red","yellow" ], "yellow")).toEqual(
+		expect(bringToFront([ "blue", "red", "yellow" ], "yellow")).toEqual(
 				[ "blue", "red", "yellow" ]);
 	});
-	
+
 	it("should be able to do this", function() {
-		expect(bringToFront([  "blue", "green","yellow" ], "yellow")).toEqual(
+		expect(bringToFront([ "blue", "green", "yellow" ], "yellow")).toEqual(
 				[ "blue", "green", "yellow" ]);
 	});
-	
+
 	it("should be able to do this", function() {
-		expect(bringToFront([  "green", "red","yellow" ], "yellow")).toEqual(
+		expect(bringToFront([ "green", "red", "yellow" ], "yellow")).toEqual(
 				[ "green", "red", "yellow" ]);
 	});
-	
-	
-	
-	
+
 	it("should be able to do this", function() {
 		expect(bringToFront([ "yellow", "blue", "red", ], "yellow")).toEqual(
 				[ "blue", "red", "yellow" ]);
 	});
-	
+
 	it("should be able to do this", function() {
 		expect(bringToFront([ "yellow", "blue", "green", ], "yellow")).toEqual(
 				[ "blue", "green", "yellow" ]);
 	});
-	
+
 	it("should be able to do this", function() {
 		expect(bringToFront([ "yellow", "green", "red", ], "yellow")).toEqual(
 				[ "green", "red", "yellow" ]);
 	});
-	
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "green", "yellow", "red", ], "yellow")).toEqual(
+				[ "green", "red", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "yellow", "green", ], "yellow")).toEqual(
+				[ "red", "green", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "blue", "green", "yellow" ], "yellow"))
+				.toEqual([ "red", "blue", "green", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "green", "blue", "yellow" ], "yellow"))
+				.toEqual([ "red", "green", "blue", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "blue", "yellow", "green" ], "yellow"))
+				.toEqual([ "red", "blue", "green", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "green", "yellow", "blue" ], "yellow"))
+				.toEqual([ "red", "green", "blue", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "yellow", "blue", "green" ], "yellow"))
+				.toEqual([ "red", "blue", "green", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "red", "yellow", "green", "blue" ], "yellow"))
+				.toEqual([ "red", "green", "blue", "yellow" ]);
+	});
+
 	
 	
 	it("should be able to do this", function() {
-		expect(bringToFront([  "green","yellow", "red", ], "yellow")).toEqual(
-				[ "green", "red", "yellow" ]);
+		expect(bringToFront([  "yellow","red", "blue", "green" ], "yellow"))
+				.toEqual([ "red", "blue", "green", "yellow" ]);
+	});
+
+	it("should be able to do this", function() {
+		expect(bringToFront([ "yellow", "red",  "green", "blue" ], "yellow"))
+				.toEqual([ "red", "green", "blue", "yellow" ]);
 	});
 	
 	
-
+	
+	
 });
 
 /*
