@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic Animation</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		var i = 0;
+		setInterval(function() {
+			//Clear the canvas
+			canvas.width = canvas.width;
+			
+			context.fillRect(50, 50 + i, 50, 50);
+			i++
+		}, 30);
+
+	});
+</script>
+
+</head>
+<body>
+	<canvas id="canvas" height="300px" width="300px"></canvas>
+
+</body>
+</html>
