@@ -6,31 +6,40 @@
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
+<script type="text/javascript" src="basicAnimationModel.js"></script>
+<script type="text/javascript" src="basicAnimationController.js">
+	
+</script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
-		var i = 0;
-		
+
+		var controler = new basicAnimationController();
+
 		setInterval(function() {
-			//Clear the canvas
-			canvas.width = canvas.width;
+			var model = controler.move();
+			draw(model);
+		}, 100);
 
-			context.fillStyle = "blue";
-			context.fillRect(50, 50 + i, 50, 50);
-			context.fillStyle = "red";
-			context.fillRect(50 + i, 50, 10, 10);
+		//	setInterval(function() {
+		//  Clear the canvas
+		//	canvas.width = canvas.width;
+		//			context.fillStyle = "blue";
+		//			context.fillRect(50, 50 + i, 50, 50);
+		//			context.fillStyle = "red";
+		//			context.fillRect(50 + i, 50, 10, 10);
+		//			i++
+		//			if (i == 300) {
+		//				i = 0;
+		//			}
+		//	}, 10);
 
-			
-			i++
-
-			if (i == 300) {
-				i = 0;
-			}
-
-		}, 10);
-
+		function draw(model) {
+			context.fillRect(100, 100, model.getX() , 100);
+		}
 	});
 </script>
 

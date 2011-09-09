@@ -1,5 +1,5 @@
 // an object to maintain the state of the animation
-function basicAnimationModel() {
+function basicAnimationModel(context) {
 
 	var x = 0;
 	var y = 0;
@@ -20,6 +20,10 @@ function basicAnimationModel() {
 		y = newY;
 	};
 
+	this.draw = function(){
+		context.fillRect(50,50,50,50);
+	};
+	
 	this.move = function() {
 		x++;
 		y++;
