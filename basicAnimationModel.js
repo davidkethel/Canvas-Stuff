@@ -2,7 +2,7 @@
 function basicAnimationModel(context) {
 
 	var x = 0;
-	var y = 0;
+	var y = 50;
 
 	this.getX = function() {
 		return x;
@@ -20,13 +20,11 @@ function basicAnimationModel(context) {
 		y = newY;
 	};
 
-	this.draw = function(){
-		context.fillRect(50,50,50,50);
-	};
-	
 	this.move = function() {
 		x++;
-		y++;
+		if (x > 300) {
+			x = 0;
+		}
 	};
 
 };

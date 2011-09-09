@@ -22,7 +22,7 @@
 		setInterval(function() {
 			var model = controler.move();
 			draw(model);
-		}, 100);
+		}, 10);
 
 		//	setInterval(function() {
 		//  Clear the canvas
@@ -38,7 +38,8 @@
 		//	}, 10);
 
 		function draw(model) {
-			context.fillRect(100, 100, model.getX() , 100);
+			canvas.width = canvas.width;
+			context.fillRect(model.getX(), model.getY(), 50, 50);
 		}
 	});
 </script>
