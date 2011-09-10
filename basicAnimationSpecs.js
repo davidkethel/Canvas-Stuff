@@ -7,55 +7,115 @@ describe("basicAnimationModel", function() {
 	});
 
 	it("should be able to get the current X position", function() {
-		expect(Model.getX()).toEqual(0);
+		expect(Model.getSquare1X()).toEqual(0);
 	});
 
 	it("should be able to get the current Y position", function() {
-		expect(Model.getY()).toEqual(50);
+		expect(Model.getSquare1Y()).toEqual(50);
 	});
 
 	it("Should be able set x", function() {
-		Model.setX(2);
-		expect(Model.getX()).toEqual(2);
+		Model.setSquare1X(2);
+		expect(Model.getSquare1X()).toEqual(2);
 	});
 
 	it("Should be able set y", function() {
-		Model.setY(2);
-		expect(Model.getY()).toEqual(2);
+		Model.setSquare2Y(2);
+		expect(Model.getSquare2Y()).toEqual(2);
 	});
 
+	it("should be able to get the current X position", function() {
+		expect(Model.getSquare2X()).toEqual(50);
+	});
+
+	it("should be able to get the current Y position", function() {
+		expect(Model.getSquare2Y()).toEqual(0);
+	});
+
+	it("Should be able set x", function() {
+		Model.setSquare2X(2);
+		expect(Model.getSquare2X()).toEqual(2);
+	});
+
+	it("Should be able set y", function() {
+		Model.setSquare2Y(2);
+		expect(Model.getSquare2Y()).toEqual(2);
+	});
+
+	
+	
 	it("should be able move and move x", function() {
-		Model.setX(2);
-		Model.setY(2);
+		Model.setSquare1X(2);
+		Model.setSquare1Y(2);
 
 		Model.move();
 
-		expect(Model.getX()).toEqual(3);
+		expect(Model.getSquare1X()).toEqual(3);
 	});
 
 	it("should be able move and not move Y", function() {
-		Model.setX(2);
-		Model.setY(2);
+		Model.setSquare1X(2);
+		Model.setSquare1Y(2);
 
 		Model.move();
 
-		expect(Model.getY()).toEqual(2);
+		expect(Model.getSquare1Y()).toEqual(2);
 	});
 
+	
+	it("should be able move and move Y", function() {
+		Model.setSquare2X(2);
+		Model.setSquare2Y(2);
+
+		Model.move();
+
+		expect(Model.getSquare2Y()).toEqual(3);
+	});
+
+	it("should be able move and not move X", function() {
+		Model.setSquare2X(2);
+		Model.setSquare2Y(2);
+
+		Model.move();
+
+		expect(Model.getSquare2X()).toEqual(2);
+	});
+
+	
+	
+	
+	
+	
 	it("should be able to reset at 300",function(){
-		Model.setX(299);
+		Model.setSquare1X(299);
 		Model.move();
 		
-		expect(Model.getX()).toEqual(300);
+		expect(Model.getSquare1X()).toEqual(300);
 	});
 	
 	it("should be able to reset at 300",function(){
-		Model.setX(300);
+		Model.setSquare1X(300);
 		Model.move();
 		
-		expect(Model.getX()).toEqual(0);
+		expect(Model.getSquare1X()).toEqual(0);
 	});
 	
+	
+
+	it("should be able to reset at 300",function(){
+		Model.setSquare2Y(299);
+		Model.move();
+		
+		expect(Model.getSquare2Y()).toEqual(300);
+	});
+	
+	it("should be able to reset at 300",function(){
+		Model.setSquare2Y(300);
+		Model.move();
+		
+		expect(Model.getSquare2Y()).toEqual(0);
+	});
+
 	
 	
 	

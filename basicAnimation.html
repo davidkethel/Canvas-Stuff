@@ -24,22 +24,12 @@
 			draw(model);
 		}, 10);
 
-		//	setInterval(function() {
-		//  Clear the canvas
-		//	canvas.width = canvas.width;
-		//			context.fillStyle = "blue";
-		//			context.fillRect(50, 50 + i, 50, 50);
-		//			context.fillStyle = "red";
-		//			context.fillRect(50 + i, 50, 10, 10);
-		//			i++
-		//			if (i == 300) {
-		//				i = 0;
-		//			}
-		//	}, 10);
-
 		function draw(model) {
 			canvas.width = canvas.width;
-			context.fillRect(model.getX(), model.getY(), 50, 50);
+
+			context.fillRect(model.getSquare1X(), model.getSquare1Y(), 50, 50);
+			context.fillRect(model.getSquare2X(), model.getSquare2Y(), 50, 50);
+
 		}
 	});
 </script>
@@ -47,6 +37,5 @@
 </head>
 <body>
 	<canvas id="canvas" height="300px" width="300px"></canvas>
-
 </body>
 </html>
