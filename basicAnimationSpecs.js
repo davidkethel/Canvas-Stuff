@@ -6,11 +6,11 @@ describe("basicAnimationModel", function() {
 		Model = new basicAnimationModel();
 	});
 
-	it("should be able to get the current X position", function() {
+	it("Square 1 Default X position", function() {
 		expect(Model.getSquare1X()).toEqual(0);
 	});
 
-	it("should be able to get the current Y position", function() {
+	it("Square 1 Default Y position", function() {
 		expect(Model.getSquare1Y()).toEqual(50);
 	});
 
@@ -24,11 +24,11 @@ describe("basicAnimationModel", function() {
 		expect(Model.getSquare2Y()).toEqual(2);
 	});
 
-	it("should be able to get the current X position", function() {
+	it("Square 2 Default X position", function() {
 		expect(Model.getSquare2X()).toEqual(50);
 	});
 
-	it("should be able to get the current Y position", function() {
+	it("Square 2 Default Y position", function() {
 		expect(Model.getSquare2Y()).toEqual(0);
 	});
 
