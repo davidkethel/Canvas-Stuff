@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+	
+</script>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+
+		
+		
+		setInterval(function() {
+
+			var randomX = Math.random() * 500;
+			var randomY = Math.random() * 500;
+			context.fillRect(randomX, randomY, 2, 70);
+		}, 100);
+
+	});
+</script>
+
+</head>
+<body>
+
+
+	<canvas id="canvas" width="500px" height="500px"></canvas>
+</body>
+</html>

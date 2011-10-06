@@ -123,19 +123,14 @@ describe("BringToFront", function() {
 				.toEqual([ "red", "green", "blue", "yellow" ]);
 	});
 
-	
-	
 	it("should be able to do this", function() {
-		expect(bringToFront([  "yellow","red", "blue", "green" ], "yellow"))
+		expect(bringToFront([ "yellow", "red", "blue", "green" ], "yellow"))
 				.toEqual([ "red", "blue", "green", "yellow" ]);
 	});
 
 	it("should be able to do this", function() {
-		expect(bringToFront([ "yellow", "red",  "green", "blue" ], "yellow"))
+		expect(bringToFront([ "yellow", "red", "green", "blue" ], "yellow"))
 				.toEqual([ "red", "green", "blue", "yellow" ]);
 	});
-	
-	
-	
-	
+
 });
