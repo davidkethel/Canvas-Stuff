@@ -1,2 +1,7 @@
 Just want to get a better understanding of the new Canvas tag in HTML5, So this Repository is just a collection
 of different examples and what not.
+
+1. Basic Shape - Simple Static layout of some basic shapes. Kinda looks like a spider
+2. OverLap - wanted to see how canvas handles basic layering. Just 2 squares that overlap, and you can bring either of them to the front.
+
+
